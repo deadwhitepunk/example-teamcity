@@ -38,7 +38,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = "build/libs/*.jar"
+    artifactRules = "target/*.jar"
     publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
