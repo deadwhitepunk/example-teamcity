@@ -54,13 +54,13 @@ object Build : BuildType({
             userSettingsSelection = "settings.xml"
         }
         maven {
-            name = "Maven clean test (1)"
+            name = "Maven clean deploy"
             id = "Maven2_1"
 
             conditions {
-                doesNotContain("teamcity.build.branch", "master")
+                contains("teamcity.build.branch", "master")
             }
-            goals = "clean test"
+            goals = "clean deploy"
             runnerArgs = "-Dmaven.test.failure.ignore=true"
             userSettingsSelection = "settings.xml"
         }
