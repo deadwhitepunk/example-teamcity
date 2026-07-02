@@ -39,6 +39,7 @@ object Build : BuildType({
     name = "Build"
 
     artifactRules = "build/libs/*.jar"
+    publishArtifacts = PublishMode.SUCCESSFUL
 
     vcs {
         root(DslContext.settingsRoot)
